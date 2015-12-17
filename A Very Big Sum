@@ -1,0 +1,11 @@
+// Given an array of large numbers calculate the sum
+// Sample var bigArr = [1000000001, 1000000002, 1000000003, 1000000004, 1000000005]
+// bigSum(bigArr)
+
+function bigSum(input) {
+	var total = 0;
+	for (var i = 0; i < input.length; i++) {
+		total += input[i];
+	}
+	document.getElementById("result").innerHTML += "<br>" + total;
+}
