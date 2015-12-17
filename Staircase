@@ -1,0 +1,11 @@
+// Given an integer output a staircase using hash symbols with the same number of steps as the input.
+function createStairs(input) {
+	var output = "";
+	for (var i = 0; i < input; i++) {
+		output += " ";
+	}
+	for (var i = 0; i < input; i++) {
+		output = output.slice(1) + "#";
+		document.getElementById("result").innerHTML += "<br>" + output;
+	}
+}
