@@ -1,4 +1,5 @@
 // Given an integer output a staircase using hash symbols with the same number of steps as the input.
+// Sample: createStairs(6);
 function createStairs(input) {
 	var output = "";
 	for (var i = 0; i < input; i++) {
