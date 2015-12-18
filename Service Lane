@@ -1,0 +1,11 @@
+// given an entry lane, an exit lanem and the size of each lane determine what is the greatest size of vehicle that can fix through the service lane
+// the exact question can be found at: https://www.hackerrank.com/challenges/service-lane
+function serviceLane(entry, exit, sizeArr) {
+  var largest = 3;
+  for (var k = entry; k <= exit; k++) {
+    if (sizeArr[k] < largest) {
+      largest = sizeArr[k];
+    }
+  }
+  return largest;
+}
