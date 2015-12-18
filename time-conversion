@@ -1,0 +1,19 @@
+// convert 12 hour time in the string format of "hh:mm:ssPM" to 24 hour format
+// the exact question can be found at: https://www.hackerrank.com/challenges/time-conversion
+
+function timeConversion(time) {
+    var militaryTime = time.substring(0, 8);
+    var hour = parseInt(time.substring(0,2)) 
+    var modifyer = time.substring(8);
+
+    if (modifyer === "PM" && hour !== 12) {
+        hour = parseInt(time.substring(0,2)) + 12;
+        return hour + militaryTime.substring(2);
+    }  
+
+    if (hour === 12 && modifyer === "AM") {
+        return "00" + militaryTime.substring(2);
+    }
+
+    return militaryTime;
+}
