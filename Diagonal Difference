@@ -1,0 +1,20 @@
+/* 
+Given a square matrix find the absolute difference of the sum of each diagonal.
+
+Example :
+var arr = [
+  [1, 2, 3],
+  [0, 0, 0],
+  [9, 8, 7]
+];
+yields 4; because 1+0+7 = 8 and 3+0+9= 12 and |8-12| = 4
+*/
+
+function matrixDif(sqrArr) {
+  var total = 0;
+  var n = sqrArr.length;
+  for (var i = 0; i < n; i++) {
+    total += sqrArr[i][i] - sqrArr[i][n-i-1];
+  }
+  return Math.abs(total);
+}
