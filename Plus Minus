@@ -1,0 +1,18 @@
+// given an array of numbers determine which fraction are positive, negative, and zero
+
+function plusMinus(arr) {
+  var totals = [0, 0, 0] //plus, minus, zero
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+        totals[0]++;
+    }
+    else if (arr[i] < 0) {
+        totals[1]++;
+    }
+    else {
+        totals[2]++;
+    }
+  }
+
+  return [totals[0]/arr.length, totals[1]/arr.length, totals[2]/arr.length];
+}
