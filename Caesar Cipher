@@ -1,0 +1,43 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        String s = in.next();
+        int k = in.nextInt();
+        
+        System.out.println(caesarCipher(s,k));
+    }
+    
+    public static String caesarCipher(String message, int delta) {
+        if (delta == 0) return message;
+
+        String decodedStr = "";
+        int newLetter;
+        
+        for (int i = 0; i < message.length(); i++) {
+            char character = message.charAt(i);
+            newLetter =  character;
+            
+            if ((65 <= newLetter && newLetter <= 90) || (97 <= newLetter && newLetter <= 122)){
+                for (int j = 0; j < delta; j++) {
+                    newLetter++;
+                    if (newLetter == 91){
+                        newLetter = 65;
+                    }
+                    if (newLetter == 123) {
+                        newLetter = 97;
+                    }
+                }
+            }
+            decodedStr += Character.toString((char)newLetter);
+        }
+        return decodedStr;
+    }
+}
