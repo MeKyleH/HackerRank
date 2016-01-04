@@ -1,0 +1,6 @@
+// this is for three lines with an integer, string, and integer
+
+Scanner in = new Scanner(System.in);
+int n = in.nextInt();
+String s = in.next();
+int k = in.nextInt();
