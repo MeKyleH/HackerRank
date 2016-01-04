@@ -1,0 +1,11 @@
+//Print data forward for non-null Nodes
+
+void Print(Node head) {
+  //stops printing if the current node doesn't have a following node
+  if (head == null) {
+      return;
+  }
+  // print this line and then repeat these same operations on the next node
+  System.out.println(head.data);
+  Print(head.next);
+}
